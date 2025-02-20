@@ -9,7 +9,7 @@ The Simple Weather App is a web application that fetches real-time weather data 
    - Styling and layout
 - JavaScript
    - Handles logic and API requests
-- OpenWeather API
+- [OpenWeatherAPI](https://openweathermap.org/api)
    - Fetches real-time weather data
 
 ## 🚀 Features
@@ -35,7 +35,12 @@ The Simple Weather App is a web application that fetches real-time weather data 
     - Processing user input and preventing duplicate searches
 
 ## Screenshots
-
+### App main screen
+> <img src="https://raw.githubusercontent.com/JasonD-Dev/Simple-Weather-App/refs/heads/main/Screenshots/Screenshot%202025-02-21%20013336.png" width=600 height=300>
+### App In Use
+> <img src="https://raw.githubusercontent.com/JasonD-Dev/Simple-Weather-App/refs/heads/main/Screenshots/Screenshot%202025-02-21%20013550.png" width=700 height=420>
+### 2 Cities with the same name
+> <img src="https://raw.githubusercontent.com/JasonD-Dev/Simple-Weather-App/refs/heads/main/Screenshots/Screenshot%202025-02-21%20013923.png" width=500 height=420>
 ## 🛠️ How to Run the App
 1. Clone this repository
 ```
