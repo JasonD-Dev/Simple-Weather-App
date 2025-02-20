@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather App</title>
+    <link rel="stylesheet" href="./weather-app.css"></link>
+</head>
+<body>
+    <!-- Top Section -->
+    <section class="top-banner">
+        <div class="container">
+          <h1 class="heading">Simple Weather App</h1>
+          <form>
+            <input type="text" placeholder="Search for a city" autofocus>
+            <button type="submit">SUBMIT</button>
+            <span class="msg">Valid Input: CityName, CountryCode<br>Example: Sydney or Sydney, AU</span>
+          </form>
+        </div>
+      </section>
+      <section class="ajax-section">
+        <div class="container">
+          <ul class="cities"></ul>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <div class="container">
+          <small>Made by <a href="https://github.com/JasonD-Dev" target="_blank">Jason D'Souza</a>
+          </small>
+        </div>
+      </footer>
+    <script src="./weather-app.js"></script>
+</body>
+</html>
