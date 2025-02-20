@@ -20,31 +20,25 @@ form.addEventListener("submit", e => {
 
   if (listItemsArray.length > 0) {
     const filteredArray = listItemsArray.filter(el => {
-      let content = "";
-      if (inputVal.includes(",")) {
-        if (inputVal.split(",")[1].length > 2) {
-          inputVal = inputVal.split(",")[0];
-          content = el
-            .querySelector(".city-name span")
-            .textContent.toLowerCase();
-        } else {
-          content = el.querySelector(".city-name").dataset.name.toLowerCase();
-        }
-      } else {
-        content = el.querySelector(".city-name span").textContent.toLowerCase();
-      }
-      return content == inputVal.toLowerCase();
+        let cityName = el.querySelector(".city-name span").textContent.toLowerCase();
+        let countryCode = el.querySelector(".city-name").dataset.name.split(",")[1].toLowerCase();
+
+        let inputCity = inputVal.split(",")[0].trim().toLowerCase();
+        let inputCountry = inputVal.includes(",") ? inputVal.split(",")[1].trim().toLowerCase() : "";
+
+        return cityName === inputCity && (!inputCountry || countryCode === inputCountry);
     });
 
     if (filteredArray.length > 0) {
-      msg.textContent = `The weather for ${
-        filteredArray[0].querySelector(".city-name span").textContent
-      } has already been listed. Try be more specific by providing the country code as well.`;
-      form.reset();
-      input.focus();
-      return;
+        msg.textContent = `The weather for ${
+            filteredArray[0].querySelector(".city-name span").textContent
+        } (${filteredArray[0].querySelector(".city-name").dataset.name.split(",")[1]}) has already been listed.`;
+        
+        form.reset();
+        input.focus();
+        return;
     }
-  }
+}
 
   // Ajax Request
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
